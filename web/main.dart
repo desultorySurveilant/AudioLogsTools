@@ -56,7 +56,7 @@ void updateOutput(Element output, List<String> knownLogs, int action) async{
     try{
       if(action == 0){
         append = await checkGigglesnort(w) + '\n';
-        output.appendText(append);
+        output.appendHtml(append);
       }else if (action ==1){
         append = 'http://farragnarok.com/PodCasts/$w.png';
         if(await exists(append)){
