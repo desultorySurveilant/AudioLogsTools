@@ -15,6 +15,7 @@ ab11
 ab13
 ab14
 abspiel
+absstruggle
 ab_alchemized
 ab_second_robot
 ab_sprite_origin
@@ -66,6 +67,7 @@ CaseStudy_Suits
 CaseStudy_Values
 CaseStudy_Hands
 CaseStudy_Unused
+casestudylord
 charms1
 charms2
 charms3
@@ -183,6 +185,7 @@ lizardFucking
 lohae
 lomat_by_fan_gnome
 lte
+manifesto
 manipulation
 metalPrince
 metametameta
@@ -282,7 +285,9 @@ thinklikeawaste
 time
 timehole
 tin
+todopile
 traitsItemsAlchemy
+truerootgod
 turtles
 turtles2
 Vargrant
