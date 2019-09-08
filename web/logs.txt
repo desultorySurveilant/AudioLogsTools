@@ -15,6 +15,7 @@ ab11
 ab13
 ab14
 abspiel
+absstruggle
 ab_alchemized
 ab_second_robot
 ab_sprite_origin
@@ -31,6 +32,7 @@ arms
 asdfghjkl
 a_matter_of_perspective
 barrybonds
+bear_alert
 besafe
 betterthanexpected
 birdRealm0
@@ -66,12 +68,14 @@ CaseStudy_Suits
 CaseStudy_Values
 CaseStudy_Hands
 CaseStudy_Unused
+casestudylord
 charms1
 charms2
 charms3
 charms4
 Campfire_In_the_Void
 circus
+chaotic_neutral
 cheetoTimeline0
 cheetoTimeline1
 cheetoTimeline2
@@ -101,6 +105,7 @@ dear_sweet_precious
 decay
 doll
 dollsim
+DollSim_Video_Audio
 domain
 dqon
 echidnalaugh
@@ -110,6 +115,7 @@ echidnaScience
 ego
 exilethebody
 explode
+exploit_the_rules
 fan_cd_waste
 fiddle
 find_me
@@ -183,11 +189,13 @@ lizardFucking
 lohae
 lomat_by_fan_gnome
 lte
+manifesto
 manipulation
 metalPrince
 metametameta
 mindstrings
 mindtimebadideas
+nazar
 nebulousHarmony1
 nebulousHarmony2
 nebulousHarmony3
@@ -211,6 +219,7 @@ notrees
 null
 outbreak
 owo
+oxbow_lakes
 piano
 Please_Hold_V2
 prince
@@ -236,6 +245,7 @@ realness_quotient
 replicate
 riddlesthree
 root
+roseofeden
 runes
 sage_advice_noodle
 sandwich
@@ -277,12 +287,15 @@ tableGuardian6
 tableGuardian6b
 tableGuardian7
 there_will_be_consequences
+the_first_lunch
 theuniverseclock
 thinklikeawaste
 time
 timehole
 tin
+todopile
 traitsItemsAlchemy
+truerootgod
 turtles
 turtles2
 Vargrant
@@ -297,7 +310,9 @@ waste_of_space_lands
 wasted
 weird
 what_is_farragnarok
+who_is_jr
 whoshogunactuallyis
+Wiggling_Time
 wis
 wolfcop
 yearnfulNode1
