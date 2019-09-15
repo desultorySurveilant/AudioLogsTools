@@ -23,9 +23,21 @@ Future main() async {
   wb.onClick.listen((e){
     updateOutput(div, knownLogs, 2);
   });
+  ButtonElement m4 = ButtonElement()
+    ..text = 'Check M4A';
+  m4.onClick.listen((e){
+    updateOutput(div, knownLogs, 3);
+  });
+  ButtonElement wp = ButtonElement()
+    ..text = 'Make wiki pages';
+  wp.onClick.listen((e){
+    updateOutput(div, knownLogs, 4);
+  });
   output.append(gb); output.appendText('\n');
   output.append(ib); output.appendText('\n');
   output.append(wb); output.appendText('\n');
+  output.append(m4); output.appendText('\n');
+  output.append(wp); output.appendText('\n');
   output.append(div);
 
 //  for(String w in knownLogs) {
@@ -49,6 +61,37 @@ Future<String> checkGigglesnort(String w) async {
   return("<b>TESTED PASSPHRASE $w FAILED</b>");
   }
 }
+Future<String> toWikiPage(String w) async{
+  w = w.trim();
+  String ret = '\n$w AudioLog\n';
+  try {
+    String logData = await HttpRequest.getString('http://farragnarok.com/PodCasts/$w.json');
+    var j = jsonDecode(logData);
+    String keywords = j['keywords'];
+    String speaker = j['speaker'];
+    String gigglesnort = j['gigglesnort'];
+    String summary = j['summary'];
+    ret += '{{AudioLog|title1 = $w|keywords = $keywords|speaker = $speaker|gigglesnort = $gigglesnort|summary = $summary}}';
+    ret += '\n== Transcript ==\n';
+    try{
+      String tra = j['transcript'];
+      tra.trim();
+      if(tra == ''){
+        tra = null;
+      }else{
+        tra = '<nowiki>$tra</nowiki>';
+      }
+      ret += tra;
+      ret += '\n';
+    }catch (e) {
+      ret += 'Please give me a transcript\n[[Category:Missing Transcript]]';
+    }
+    ret += '[[Category:AudioLog]]';
+  } catch (e) {
+    return("TESTED PASSPHRASE $w FAILED");
+  }
+  return ret;
+}
 void updateOutput(Element output, List<String> knownLogs, int action) async{
   String append = '';
   output.children.clear();
@@ -66,6 +109,14 @@ void updateOutput(Element output, List<String> knownLogs, int action) async{
         }
       }else if (action == 2){
         append = toWikiLink(w);
+        output.appendText(append);
+      }else if (action ==3){
+        append = 'http://farragnarok.com/PodCasts/$w.m4a';
+        if(await exists(append)){
+          output.appendText('$append\n');
+        }
+      }else if (action == 4){
+        append = await toWikiPage(w);
         output.appendText(append);
       }
     } catch (e) {
