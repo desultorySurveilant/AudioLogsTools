@@ -69,6 +69,7 @@ CaseStudy_Values
 CaseStudy_Hands
 CaseStudy_Unused
 casestudylord
+casestudyrobot
 charms1
 charms2
 charms3
@@ -156,6 +157,7 @@ glory
 gnome_megalovania_butler_fuck
 goodboi
 graceofrage
+Grok
 guarded_mythos
 heartvsmind
 hello_butler_bot
@@ -169,6 +171,7 @@ jingle_lore
 jr_is_a_jar
 jr_is_the_man
 jryardspiel
+justdontdoit
 karmicRetribution0
 karmicRetribution1
 karmicRetribution2
@@ -217,6 +220,7 @@ nope3
 note_to_self
 notrees
 null
+omelas
 outbreak
 owo
 oxbow_lakes
@@ -315,6 +319,7 @@ whoshogunactuallyis
 Wiggling_Time
 wis
 wolfcop
+verystrong
 yearnfulNode1
 yearnfulNode2
 yearnfulNode3
