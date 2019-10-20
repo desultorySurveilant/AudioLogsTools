@@ -33,11 +33,17 @@ Future main() async {
   wp.onClick.listen((e){
     updateOutput(div, knownLogs, 4);
   });
+  ButtonElement ls = ButtonElement()
+    ..text = 'Make a string for local storage';
+  ls.onClick.listen((e){
+    updateOutput(div, knownLogs, 5);
+  });
   output.append(gb); output.appendText('\n');
   output.append(ib); output.appendText('\n');
   output.append(wb); output.appendText('\n');
   output.append(m4); output.appendText('\n');
   output.append(wp); output.appendText('\n');
+  output.append(ls); output.appendText('\n');
   output.append(div);
 
 //  for(String w in knownLogs) {
@@ -122,6 +128,9 @@ void updateOutput(Element output, List<String> knownLogs, int action) async{
     } catch (e) {
       print('What the hell\'s going on?!');
     }
+  }
+  if(action == 5){
+    output.appendText('"${knownLogs.join(',')}"');
   }
 }
 Future <bool> exists(String url) async{
