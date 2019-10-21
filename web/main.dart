@@ -38,12 +38,18 @@ Future main() async {
   ls.onClick.listen((e){
     updateOutput(div, knownLogs, 5);
   });
+  ButtonElement pd = ButtonElement()
+    ..text = 'Check Paldemic Files';
+  ls.onClick.listen((e){
+    updateOutput(div, knownLogs, 6);
+  });
   output.append(gb); output.appendText('\n');
   output.append(ib); output.appendText('\n');
   output.append(wb); output.appendText('\n');
   output.append(m4); output.appendText('\n');
   output.append(wp); output.appendText('\n');
   output.append(ls); output.appendText('\n');
+  output.append(pd); output.appendText('\n');
   output.append(div);
 
 //  for(String w in knownLogs) {
@@ -131,6 +137,13 @@ void updateOutput(Element output, List<String> knownLogs, int action) async{
   }
   if(action == 5){
     output.appendText('"${knownLogs.join(',')}"');
+  }else if(action == 6){
+    knownLogs.forEach((log) async{
+      append = 'http://farragnarok.com/PodCasts/$log.paldemic';
+      if(await exists(append)){
+        output.appendText(append);
+      }
+    });
   }
 }
 Future <bool> exists(String url) async{
