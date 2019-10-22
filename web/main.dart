@@ -148,7 +148,7 @@ void updateOutput(Element output, List<String> knownLogs, int action) async{
 }
 Future <bool> exists(String url) async{
   try{
-    await HttpRequest.request(url) != null;
+    await HttpRequest.getString(url) != null;
     return true;
   } catch(e) {
     return false;
